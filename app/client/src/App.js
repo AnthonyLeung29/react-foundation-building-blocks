@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename="react-foundation-building-blocks">
         <div className="App">
           <Route exact path='/' component={ FoundationIcons } />
           <Route path='/tableExpand' component={ TableExpand } />         
