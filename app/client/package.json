@@ -11,10 +11,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "none atm"
+    "url": "https://github.com/anthonyleung96/react-foundation-building-blocks.git"
   },
+  "keywords": [
+    "react",
+    "foundation",
+    "building blocks",
+    "foundation icons"
+  ],
   "author": "Anthony Leung",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anthonyleung96/react-foundation-building-blocks/issues"
+  },
+  "homepage": "https://github.com/anthonyleung96/react-foundation-building-blocks",
   "eslintConfig": {
     "extends": "react-app"
   },
