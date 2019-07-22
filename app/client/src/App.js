@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './style/scss/App.scss';
 import TableExpand from './components/building-blocks/community/TableExpand';
 import FoundationIcons from './components/FoundationIcons';
+import AppDashboardLayout from './components/building-blocks/community/AppDashboardLayout';
 
 class App extends Component {
   state = {
@@ -20,7 +21,8 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route exact path='/' component={ FoundationIcons } />
+          <Route exact path='/' component={ AppDashboardLayout } />
+          <Route path='/foundationIcons' component={ FoundationIcons } />
           <Route path='/tableExpand' component={ TableExpand } />         
         </div>
       </Router>
