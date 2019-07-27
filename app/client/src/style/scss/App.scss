@@ -2,4 +2,8 @@
 // Foundation assets must be after custom import
 @import "node_modules/foundation-sites/assets/foundation";
 
-@import "../foundation-icons/_foundation-icons.css"
+@import "../foundation-icons/_foundation-icons.css";
+
+// Building Block imports
+@import "./community/AppDashboardLayout.scss";
+@import "./community/ResponsiveTable.scss";
