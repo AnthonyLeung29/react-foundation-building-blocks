@@ -1,29 +1,41 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+// Stylesheet for foundation
 import './style/scss/App.scss';
-import TableExpand from './components/building-blocks/community/TableExpand';
-import FoundationIcons from './components/FoundationIcons';
-import AppDashboardLayout from './components/building-blocks/community/AppDashboardLayout';
+import ROUTES from './routes';
+import AppDashboardLayout from './components/building-blocks/community/app-dashboard-layout/AppDashboardLayout';
 
 class App extends Component {
-  state = {
-    toLoginPage: false,
-    toSplash: true
+  constructor() {
+    super();
+    this.state = {
+      appName: 'React Foundation',
+      username: 'Anthony'
+    };
   }
-
   // Loads the foundation js right after the initial rendering of React
   componentDidMount() {
     window.$(document).foundation();
   }
 
   render() {
+    const { appName, username } = this.state;
+
+    const routeComponents = ROUTES.map((route, index) => (
+      <Route key={index} path={route.path} component={route.component} />
+    ));
+
     return (
       <Router>
         <div className="App">
-          <Route exact path='/' component={ AppDashboardLayout } />
-          <Route path='/foundationIcons' component={ FoundationIcons } />
-          <Route path='/tableExpand' component={ TableExpand } />         
+          <AppDashboardLayout
+            appName={appName}
+            username={username}
+            menuItems={ROUTES}
+          >
+            {routeComponents}
+          </AppDashboardLayout>
         </div>
       </Router>
     );

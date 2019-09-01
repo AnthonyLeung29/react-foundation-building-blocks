@@ -1,9 +1,10 @@
-@import "_custom.scss";
-// Foundation assets must be after custom import
-@import "node_modules/foundation-sites/assets/foundation";
+// Foundation assets imported first, then community imports alter the base files
+@import './foundation/foundation';
 
-@import "../foundation-icons/_foundation-icons.css";
+@import '../foundation-icons/_foundation-icons.css';
 
-// Building Block imports
-@import "./community/AppDashboardLayout.scss";
-@import "./community/ResponsiveTable.scss";
+// Community Building Blocks' imported here
+@import './community/AppDashboardLayout.scss';
+@import './community/ResponsiveTable.scss';
+@import './community/CircleGraph.scss';
+@import './community/TableExpand.scss';

@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import RedirectButton from './RedirectButton';
-import { GeneralBtnPropTypes } from '../../general';
+import { GeneralBtnPropTypes } from './general';
 import Button from './Button';
 
 /**
  * Contains a group of stateless components that is composed using the
  * Redirect component. Take a look at RedirectButton.js and Button.js
  * for more info.
- * 
+ *
  * Typically contains a preset icon as the label.
  */
 
@@ -20,12 +20,12 @@ export const AddButton = props => (
     to={props.to}
     style={props.style}
   />
-)
+);
 
 AddButton.propTypes = {
   ...GeneralBtnPropTypes,
   to: PropTypes.string
-}
+};
 
 export const BackButton = props => (
   <RedirectButton
@@ -35,12 +35,12 @@ export const BackButton = props => (
     to={props.to}
     style={props.style}
   />
-)
+);
 
 BackButton.propTypes = {
   ...GeneralBtnPropTypes,
   to: PropTypes.string
-}
+};
 
 export const EditButton = props => (
   <RedirectButton
@@ -50,12 +50,12 @@ export const EditButton = props => (
     to={props.to}
     style={props.style}
   />
-)
+);
 
 EditButton.propTypes = {
   ...GeneralBtnPropTypes,
   to: PropTypes.string
-}
+};
 
 export const DeleteButton = props => (
   <Button
@@ -65,9 +65,9 @@ export const DeleteButton = props => (
     handleClick={props.handleDelete}
     style={props.style}
   />
-)
+);
 
 DeleteButton.propTypes = {
   ...GeneralBtnPropTypes,
   handleDelete: PropTypes.func.isRequired
-}
+};

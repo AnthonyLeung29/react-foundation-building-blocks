@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import PropTypes from 'prop-types'
-import { GeneralBtnPropTypes } from '../../general';
+import PropTypes from 'prop-types';
+import { GeneralBtnPropTypes } from './general';
 import Button from './Button';
 
 /**
  * Creates a button that redirects to given url when clicked.
  * Tries to follow the react mindset: A state change trigger updates.
- * 
+ *
  * For more information. Look at the Button.js
  */
 class RedirectButton extends Component {
@@ -15,34 +15,45 @@ class RedirectButton extends Component {
     super(props);
     this.state = {
       toRedirect: false
+    };
+  }
+
+  componentDidUpdate() {
+    const { toRedirect } = this.state;
+    if (toRedirect) {
+      this.setState({ toRedirect: false });
     }
   }
 
   handleClick = () => {
     this.setState({ toRedirect: true });
-  }
+  };
+
+  renderRedirect = () => {
+    if (this.state.toRedirect) {
+      return <Redirect to={this.props.to} />;
+    }
+  };
 
   render() {
-    if (this.state.toRedirect) {
-      return <Redirect to={this.props.to} />
-    }
-
     return (
-      <Button 
-        className={this.props.className}
-        btnClassName={this.props.btnClassName}
-        style={this.props.style}
-        handleClick={this.handleClick}
-        label={this.props.label} 
-      />
-    )
+      <React.Fragment>
+        {this.renderRedirect()}
+        <Button
+          className={this.props.className}
+          style={this.props.style}
+          handleClick={this.handleClick}
+        >
+          {this.props.children}
+        </Button>
+      </React.Fragment>
+    );
   }
 }
 
 RedirectButton.propType = {
   ...GeneralBtnPropTypes,
-  label: PropTypes.string.isRequired,
-  to: PropTypes.string,
-}
+  to: PropTypes.string
+};
 
 export default RedirectButton;

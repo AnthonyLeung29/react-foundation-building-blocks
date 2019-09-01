@@ -3,13 +3,15 @@ import PropTypes from 'prop-types';
 
 /**
  * Creates a responsive table that stacks into cards when space is limited.
- * 
+ *
  * Given an array of headers and data, will create the table with keys corresponding
- * to each row and cell, starting from the top-left as (0, 0)
- * 
- * Ex of props:
- *    header = ["Age", "Gender", ...],
- *    data = [{ Age: 25, Gender: "Male" }, { Age: 45, Gender: "Female"}, ...]
+ * to each row and cell, starting from the top-left as (0, 0).
+ *
+ * The table will abbreviate cells in which the content is too long
+ *
+ * Ex props:
+ *    headers = ["Age", "Gender", ...],
+ *    data = [{Age: 25, Gender: "Male"}, {Age: 45, Gender: "Female"}, ...]
  *
  * SCSS Credits to:
  * https://foundation.zurb.com/building-blocks/blocks/responsive-card-table.html
@@ -20,8 +22,8 @@ const ResponsiveTable = ({ headers, data }) => (
       <HeaderRow headers={headers} />
     </thead>
     <tbody>
-      {mapEachIndex(data, (i, row) => (
-        <BodyRow key={i} cols={headers} row={row} />
+      {data.map((row, index) => (
+        <BodyRow key={index} cols={headers} row={row} />
       ))}
     </tbody>
   </table>
@@ -38,36 +40,38 @@ export default ResponsiveTable;
 
 const HeaderRow = ({ headers }) => (
   <tr>
-    {mapEachIndex(headers, (index, header) => (
-      <th key={index}>{header}</th>
+    {headers.map((header, index) => (
+      <th key={index}>{abbreviate(header)}</th>
     ))}
   </tr>
 );
 
 const BodyRow = ({ cols, row }) => (
   <tr>
-    {mapEachIndex(cols, (j, col) => (
-      <td key={j} data-label={col}>
-        {row[col]}
-      </td>
-    ))}
+    {cols.map((col, index) => {
+      return (
+        <td key={index} data-label={col}>
+          {abbreviate(row[col])}
+        </td>
+      );
+    })}
   </tr>
 );
 
-// ***** Helper Functions *****
-
 /**
- * Similar to a Array.prototype.map except that the callback passes
- * an index AND the element
- * 
- * @param {array} array 
- * @param {function(int, object):object} callback 
+ * Given a string, the function will return a JSX object an abbreviating the string
+ * if necessary.
+ *
+ * @param {string} string
  */
-const mapEachIndex = function(array, callback) {
-  const newArray = [];
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    newArray.push(callback(index, element));
+function abbreviate(string) {
+  const LIMIT = 25;
+  switch (true) {
+    case string === undefined:
+      return <label>UNDEFINED</label>;
+    case string.length > LIMIT:
+      return <abbr title={string}>{string.substring(0, LIMIT)}</abbr>;
+    default:
+      return <React.Fragment>{string}</React.Fragment>;
   }
-  return newArray;
-};
+}
