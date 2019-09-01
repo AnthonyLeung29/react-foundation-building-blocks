@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/anthonyleung96/react-foundation-building-blocks/precache-manifest.8233677051a3089a4e2fc9d61ca3feb5.js"
+  "/react-foundation-building-blocks/precache-manifest.e0da6fbc42ed4e3536ec38152a33a92f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/anthonyleung96/react-foundation-building-blocks/index.html", {
+workbox.routing.registerNavigationRoute("/react-foundation-building-blocks/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });

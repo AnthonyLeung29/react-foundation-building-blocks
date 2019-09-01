@@ -1,14 +1,14 @@
 {
-  "main.css": "/anthonyleung96/react-foundation-building-blocks/static/css/main.5e3a9a54.chunk.css",
-  "main.js": "/anthonyleung96/react-foundation-building-blocks/static/js/main.fead4caa.chunk.js",
-  "main.js.map": "/anthonyleung96/react-foundation-building-blocks/static/js/main.fead4caa.chunk.js.map",
-  "runtime~main.js": "/anthonyleung96/react-foundation-building-blocks/static/js/runtime~main.38569027.js",
-  "runtime~main.js.map": "/anthonyleung96/react-foundation-building-blocks/static/js/runtime~main.38569027.js.map",
-  "static/js/2.ea4a6e49.chunk.js": "/anthonyleung96/react-foundation-building-blocks/static/js/2.ea4a6e49.chunk.js",
-  "static/js/2.ea4a6e49.chunk.js.map": "/anthonyleung96/react-foundation-building-blocks/static/js/2.ea4a6e49.chunk.js.map",
-  "index.html": "/anthonyleung96/react-foundation-building-blocks/index.html",
-  "precache-manifest.8233677051a3089a4e2fc9d61ca3feb5.js": "/anthonyleung96/react-foundation-building-blocks/precache-manifest.8233677051a3089a4e2fc9d61ca3feb5.js",
-  "service-worker.js": "/anthonyleung96/react-foundation-building-blocks/service-worker.js",
-  "static/css/main.5e3a9a54.chunk.css.map": "/anthonyleung96/react-foundation-building-blocks/static/css/main.5e3a9a54.chunk.css.map",
-  "static/media/App.scss": "/anthonyleung96/react-foundation-building-blocks/static/media/foundation-icons.e20945d7.ttf"
+  "main.css": "/react-foundation-building-blocks/static/css/main.2938f1f7.chunk.css",
+  "main.js": "/react-foundation-building-blocks/static/js/main.25a6c97f.chunk.js",
+  "main.js.map": "/react-foundation-building-blocks/static/js/main.25a6c97f.chunk.js.map",
+  "runtime~main.js": "/react-foundation-building-blocks/static/js/runtime~main.ecea8b81.js",
+  "runtime~main.js.map": "/react-foundation-building-blocks/static/js/runtime~main.ecea8b81.js.map",
+  "static/js/2.ea4a6e49.chunk.js": "/react-foundation-building-blocks/static/js/2.ea4a6e49.chunk.js",
+  "static/js/2.ea4a6e49.chunk.js.map": "/react-foundation-building-blocks/static/js/2.ea4a6e49.chunk.js.map",
+  "index.html": "/react-foundation-building-blocks/index.html",
+  "precache-manifest.e0da6fbc42ed4e3536ec38152a33a92f.js": "/react-foundation-building-blocks/precache-manifest.e0da6fbc42ed4e3536ec38152a33a92f.js",
+  "service-worker.js": "/react-foundation-building-blocks/service-worker.js",
+  "static/css/main.2938f1f7.chunk.css.map": "/react-foundation-building-blocks/static/css/main.2938f1f7.chunk.css.map",
+  "static/media/App.scss": "/react-foundation-building-blocks/static/media/foundation-icons.e20945d7.ttf"
 }
