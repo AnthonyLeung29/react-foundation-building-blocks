@@ -7,7 +7,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "react-scripts start"
+    "dev": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/anthonyleung96/react-foundation-building-blocks/issues"
   },
-  "homepage": "https://github.com/anthonyleung96/react-foundation-building-blocks",
+  "homepage": "https://anthonyleung96.github.io/react-foundation-building-blocks/",
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -43,5 +45,8 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
     "serve": "^11.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }

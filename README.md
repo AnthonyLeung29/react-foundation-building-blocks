@@ -10,4 +10,5 @@ how everything worked together at the start.
 Have updated some building blocks to be useable components.
 
 Current List:
+-   AppDashboardLayout https://foundation.zurb.com/building-blocks/blocks/app-dashboard-layout.html
 -   ResponsiveTable
